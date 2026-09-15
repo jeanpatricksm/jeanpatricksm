@@ -1,4 +1,4 @@
-~~~aura width=860 height=980
+~~~aura width=860 height=730
 (function() {
   var bannerLanguages = ['TypeScript', 'JavaScript', 'Next.js', 'React', 'Node.js'];
   var stackColors = ['#89b4fa', '#f9e2af', '#a6e3a1', '#f5c2e7', '#fab387', '#cba6f7'];
@@ -18,30 +18,6 @@
         { name: 'HTML', percentage: 6 },
         { name: 'Other', percentage: 3 },
       ];
-  function contactButton(icon, text, href, width) {
-    return (
-      <a href={href} style={{ display: 'flex', width: width, height: 40 }}>
-        <SocialMediaButton
-          icon={icon}
-          text={text}
-          backgroundColor="#181825"
-          textColor="#cdd6f4"
-          borderColor="#cba6f7"
-          width={width}
-          height={40}
-          iconSize="18"
-          gradientStops={[
-            { offset: '0%', color: '#45475a' },
-            { offset: '30%', color: '#89b4fa' },
-            { offset: '55%', color: '#b4befe' },
-            { offset: '78%', color: '#cba6f7' },
-            { offset: '100%', color: '#45475a' },
-          ]}
-        />
-      </a>
-    );
-  }
-
   return (
     <div style={{
       width: '100%', height: '100%', background: '#11111b',
@@ -74,7 +50,7 @@
         #aura-glow-5 { animation: aura-pulse 7s ease-in-out infinite; }
       `}</style>
 
-      <svg width="860" height="980" style={{ position: 'absolute', top: 0, left: 0 }}>
+      <svg width="860" height="730" style={{ position: 'absolute', top: 0, left: 0 }}>
         <defs>
           <pattern id="aura-grid" width="30" height="30" patternUnits="userSpaceOnUse">
             <path d="M30 0H0V30" fill="none" stroke="rgba(180,190,254,0.045)" strokeWidth="1" />
@@ -132,27 +108,8 @@
         <img src=".github/assets/activity-pulse.svg" width={780} height={120} style={{ marginTop: 8 }} />
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', height: 200, paddingTop: 10, boxSizing: 'border-box', position: 'relative' }}>
-        <span style={{ display: 'flex', color: 'rgba(203,166,247,0.78)', fontSize: 10, fontWeight: 700, letterSpacing: 4, marginBottom: 16 }}>PRIMARY DEPLOYMENTS</span>
-        <div style={{ display: 'flex', gap: 14, flex: 1 }}>
-          {[
-            { name: 'Morzen', description: 'Primary project', language: 'Project', accent: '#89b4fa' },
-            { name: 'portfolio', description: 'Personal portfolio', language: 'Web', accent: '#cba6f7' },
-            { name: 'start_page', description: 'Start page', language: 'Web', accent: '#b4befe' },
-          ].map(function(repository) {
-            return <div key={repository.name} style={{ display: 'flex', flexDirection: 'column', flex: 1, padding: '15px 16px', borderRadius: 12, background: 'rgba(203,166,247,0.045)', border: '1px solid rgba(203,166,247,0.2)' }}><span style={{ display: 'flex', color: '#cdd6f4', fontSize: 14, fontWeight: 700, marginBottom: 9 }}>{repository.name}</span><span style={{ display: 'flex', color: 'rgba(166,173,200,0.68)', fontSize: 10, lineHeight: 1.45 }}>{repository.description}</span><div style={{ display: 'flex', alignItems: 'center', marginTop: 'auto', paddingTop: 12, gap: 7 }}><span style={{ display: 'flex', width: 7, height: 7, borderRadius: 4, background: repository.accent }} /><span style={{ display: 'flex', color: 'rgba(205,214,244,0.76)', fontSize: 10, fontWeight: 600 }}>{repository.language}</span><span style={{ display: 'flex', color: 'rgba(166,173,200,0.54)', fontSize: 10, marginLeft: 'auto' }}>OPEN ↗</span></div></div>;
-          })}
-        </div>
-      </div>
-
-      <div style={{ display: 'flex', flexDirection: 'column', height: 120, alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-        <span style={{ display: 'flex', color: 'rgba(203,166,247,0.7)', fontSize: 9, fontWeight: 700, letterSpacing: 4, marginBottom: 14 }}>LET'S CONNECT</span>
-        <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-          {contactButton('https://img.icons8.com/ios-filled/50/ffffff/linkedin.png', 'LinkedIn', 'https://www.linkedin.com/in/jeanpatrickm/', 145)}
-          {contactButton('https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png', 'Instagram', 'https://www.instagram.com/jeanpatrickm_/', 145)}
-          {contactButton('https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png', 'YouTube', 'https://www.youtube.com/@jeanpatrickm01', 135)}
-          {contactButton('https://img.icons8.com/ios-filled/50/ffffff/new-post.png', 'Email', 'mailto:jean_patrick115@hotmail.com', 125)}
-        </div>
+      <div style={{ display: 'flex', flexDirection: 'column', height: 72, alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+        <span style={{ display: 'flex', color: 'rgba(203,166,247,0.7)', fontSize: 9, fontWeight: 700, letterSpacing: 4 }}>LET'S CONNECT</span>
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 20, position: 'relative' }}>
